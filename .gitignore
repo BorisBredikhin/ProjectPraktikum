@@ -5,3 +5,7 @@
 .idea/ProjectPraktikum.iml
 .idea/workspace.xml
 .idea/vcs.xml
+.idea/deployment.xml
+.idea/php.xml
+admin/data/sitedata.json
+.idea/webServers.xml
