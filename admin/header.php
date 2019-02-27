@@ -5,9 +5,6 @@ if (!defined($GLOBALS["sitedata"]))//Сервер тольько что запу
 <!doctype html>
 <html lang="ru">
 <head>
-    <title><?=$GLOBALS["sitedata"]->{"name"};?></title>
+    <title><?=$GLOBALS["sitedata"]->{"name"}." : ".$pageName;?></title>
 </head>
 <body>
-<h1><?=$GLOBALS["sitedata"]->{"name"};?></h1>
-</body>
-</html>

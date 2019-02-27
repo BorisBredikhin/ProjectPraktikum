@@ -4,29 +4,32 @@
     {
       "type": "radio task",
       "title": "Пример вопроса на выбор 1 из 4-х вариантов",
-      "text" : "Выберите один мз 4 вариантов",
+      "text": "Выберите один из 4 вариантов",
       "id": 0,
-      "answers": {
-        "ans1": {
+      "answers": [
+        {
+          "id": "ans1",
           "text": "wrong answer"
         },
-        "ans2": {
+        {
+          "id": "ans2",
           "text": "wrong answer"
         },
-        "ans3": {
+        {
+          "id": "ans3",
           "text": "right answer"
         },
-        "ans4": {
+        {
+          "id": "ans4",
           "text": "wrong answer"
         }
-      },
+      ],
       "rightAnswer": "ans3"
     },
-
     {
       "type": "checkbox task",
       "title": "Пример вопроса на выбор нескольких из 4-х вариантов",
-      "text" : "Выберите несколько правильных мз 4 предложенных вариантов",
+      "text": "Выберите несколько правильных из 4 предложенных вариантов",
       "id": 1,
       "answers": {
         "ans1": {
@@ -42,12 +45,15 @@
           "text": "wrong answer"
         }
       },
-      "rightAnswer": ["ans1","ans4"]
+      "rightAnswer": [
+        "ans1",
+        "ans4"
+      ]
     },
     {
-      "type": "field task",
+      "type": "text task",
       "title": "Пример вопроса с кратким ответом",
-      "text" : "Сколько будет 2+2?",
+      "text": "Сколько будет 2+2?",
       "id": 2,
       "answer": "4"
     }
