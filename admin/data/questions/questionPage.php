@@ -1,9 +1,9 @@
 <?php
+$id = 1;//$_GET["qId"];
+$pageName = "Вопрос " . $id;
 include "../../header.php";
 include "Question.php";
-$id = 0;//$_GET["qId"];
-$pageName = "Вопрос " . $id;
-$question = new Question($GLOBALS["sitedata"]->{"questions"}[0]);
+$question = new Question($GLOBALS["sitedata"]->{"questions"}[$id]);
 ?>
 <?php
 //TODO: menus

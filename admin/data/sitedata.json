@@ -31,20 +31,24 @@
       "title": "Пример вопроса на выбор нескольких из 4-х вариантов",
       "text": "Выберите несколько правильных из 4 предложенных вариантов",
       "id": 1,
-      "answers": {
-        "ans1": {
+      "answers": [
+        {
+          "id": "ans1",
           "text": "right answer"
         },
-        "ans2": {
+        {
+          "id": "ans2",
           "text": "wrong answer"
         },
-        "ans3": {
+        {
+          "id": "ans3",
+          "text": "wrong answer"
+        },
+        {
+          "id": "ans4",
           "text": "right answer"
-        },
-        "ans4": {
-          "text": "wrong answer"
         }
-      },
+      ],
       "rightAnswer": [
         "ans1",
         "ans4"

@@ -23,10 +23,33 @@ class Question
             case "radio task":
                 $this->printRadio();
                 break;
+            case "checkbox task":
+                $this->printCheckbox();
+                break;
             default:
+                echo $this->data->{"type"};
+                throw new \http\Exception\InvalidArgumentException();
                 break;
         }
         echo "</div>";
+    }
+
+    private function printCheckbox(){
+        echo <<<HTML
+<form action="processAnswer.php" method="post">
+HTML;
+        //var_dump($this->data->{"answers"});
+        foreach ($this->data->{"answers"} as $answer){
+            //var_dump($answer);
+            echo "<label><input name='answers[]' type='checkbox' value='{$answer->{"id"}}'>";
+            echo $answer->{"text"};
+            echo "</label><br>";
+        }
+        echo <<<HTML
+        <input type="submit">
+</form>
+HTML;
+
     }
 
     private function printRadio(){
