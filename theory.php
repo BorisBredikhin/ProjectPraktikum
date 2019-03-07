@@ -1,8 +1,10 @@
 <?php
+require_once "config.php";
 $pageName = "Теория";
-include "../admin/header.php";
+include ROOT_DIR."/admin/header.php";
 ?>
- 
+
+
 <!--ОСНОВНОЙ КОНТЕНТ--> 
 
   <table 

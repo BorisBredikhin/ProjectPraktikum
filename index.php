@@ -2,7 +2,6 @@
 require_once "config.php";
 $pageName = "Главная";
 include ROOT_DIR."/admin/header.php";
-//echo ROOT_DIR."/admin/header.php";
 ?>
 <a href="registration.php">Зарегистрироваться</a>
 <table
