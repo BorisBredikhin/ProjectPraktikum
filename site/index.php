@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta charset="utf-8" />
-<title>amazing HTML</title>
-</head>
-<body>
-
-<table
-border="1"
-align="center"
-rules="rows"
-style="width:60%;">
-<td>
-
+<?php
+$pageName = "Главная";
+include "../admin/header.php";
+?>
 
 <table
 border="1"
@@ -23,12 +12,7 @@ style="width:100%; border-radius:5px;">
 <!--Создаём строку таблицы-->
 <tr>
 <!--Создаём столбец таблицы-->
-<th>
-<!--Содержание ячейки столбца-->
-<h1>Amazing Html</h1>
-<h3> Обучающий сайт, знакомящий с основами языка программирования HTML</h3>
-<!--Закрываем таблицу-->
-</th>
+
 </tr>
 </table>
 

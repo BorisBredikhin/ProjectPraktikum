@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta charset="utf-8" />
-<title>Amazing HTML</title>
-</head>
-<body>
+<?php
+$pageName = "Вход";
+include "../admin/header.php";
+?>
 <form method="post" action="/login/">
     <table>
         <tr>

@@ -1,33 +1,7 @@
- <!DOCTYPE html>
-<html lang="ru">
-    <head>
-      <meta charset="utf-8" />
-      <title>Amazig HTML</title>
-	</head>
-<body>
-  <table 
-   border="1"
-   align="center"
-   rules="rows"
-   style="width:60%;">   
-    <tr>	
-      <td>
- 
-<!--ШАПКА САЙТА-->
-
-  <table 
-   border="1" 
-   background="images/168.png"
-   bgcolor="#7FFFD4"   
-   cellpadding="10" 
-   style="width:100%; border-radius:5px;">  
-    <tr>	
-      <th>	  
-       <h1>Amazing Html</h1>  
-	   <h3>сайт, обучающий основам HTML</h3>	   
-      </th> 
-    </tr> 
-  </table>
+<?php
+$pageName = "Теория";
+include "../admin/header.php";
+?>
  
 <!--ОСНОВНОЙ КОНТЕНТ--> 
 
