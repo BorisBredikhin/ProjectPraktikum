@@ -1,13 +1,14 @@
 <?php
-$pageName = "Главная";
-include "../admin/header.php";
+require_once "config.php";
+$pageName = "Регистрация";
+include ROOT_DIR."admin/header.php";
 ?>
 <!-- Блок для вывода сообщений -->
 <div class="block_for_messages">
     <div id="form_register">
         <h2>регистрация</h2>
 
-        <form action="register.php" method="post" name="form_register">
+        <form action="admin/register.php" method="post" name="form_register">
             <table>
                 <tbody>
                 <tr>
@@ -35,22 +36,13 @@ include "../admin/header.php";
                 <tr>
                     <td> Пароль:</td>
                     <td>
-                        <input type="password" name="password" placeholder="минимум 6 символов" required="required"><br>
+                        <input type="password" name="password" placeholder="минимум 8 символов" required="required"><br>
                         <span id="valid_password_message" class="mesage_error"></span>
                     </td>
                 </tr>
                 <tr>
-                    <td> Введите капчу:</td>
-                    <td>
-                        <p>
-                            <img src="captcha.php" alt="Капча"/> <br><br>
-                            <input type="text" name="captcha" placeholder="Проверочный код" required="required">
-                        </p>
-                    </td>
-                </tr>
-                <tr>
                     <td colspan="2">
-                        <input type="submit" name="btn_submit_register" value="Зарегистрироватся!">
+                        <input type="submit" value="Зарегистрироваться">
                     </td>
                 </tr>
                 </tbody>
@@ -58,5 +50,6 @@ include "../admin/header.php";
         </form>
     </div>
 </div>
-</body>
-</html>
+<?php
+include ROOT_DIR."/admin/footer.php";
+?>

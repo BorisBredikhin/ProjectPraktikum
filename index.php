@@ -1,8 +1,10 @@
 <?php
+require_once "config.php";
 $pageName = "Главная";
-include "../admin/header.php";
+include ROOT_DIR."/admin/header.php";
+//echo ROOT_DIR."/admin/header.php";
 ?>
-
+<a href="registration.php">Зарегистрироваться</a>
 <table
 border="1"
 background="images/168.png"
@@ -101,5 +103,6 @@ cellpadding="10"
 style="width:100%; border-radius:5px;">
 <
 </table>
-</body>
-</html>
+<?php
+include ROOT_DIR."/admin/footer.php";
+?>

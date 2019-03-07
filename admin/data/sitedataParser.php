@@ -6,7 +6,14 @@
  * Time: 9:36
  */
 
-$file = file_get_contents($_SERVER["DOCUMENT_ROOT"]."/admin/data/sitedata.json");
+//require_once "../../config.php";
+
+//echo ROOT_DIR."/admin/data/sitedata.json";
+
+$file = file_get_contents(ROOT_DIR."/admin/data/sitedata.json");
+
+
 
 $data = json_decode($file);
+//var_dump($data);
 $GLOBALS["sitedata"] = $data;

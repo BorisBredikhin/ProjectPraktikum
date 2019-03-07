@@ -1,6 +1,7 @@
 <?php
+require_once "config.php";
 $pageName = "Вход";
-include "../admin/header.php";
+include ROOT_DIR."/admin/header.php";
 ?>
 <form method="post" action="/login/">
     <table>
@@ -15,6 +16,6 @@ include "../admin/header.php";
     </table>
 </form>
 
-</table>
-</body>
-</html>
+<?php
+include ROOT_DIR."/admin/footer.php";
+?>
