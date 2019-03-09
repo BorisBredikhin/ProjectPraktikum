@@ -1,52 +1,49 @@
 <?php
 require_once "config.php";
 $pageName = "Регистрация";
-include ROOT_DIR."admin/header.php";
+include ROOT_DIR."/admin/header.php";
 ?>
 <!-- Блок для вывода сообщений -->
-<div class="block_for_messages">
-    <div id="form_register">
+<div class="container block-for-messages auth-form">
+    <div id="formRegister" >
         <h2>регистрация</h2>
-
-        <form action="admin/register.php" method="post" name="form_register">
+         <br>
+        <form action="admin/register.php" method="post" name="formRegister">
             <table>
                 <tbody>
                 <tr>
-                    <td> Имя:</td>
+                    <td><label for="firstName">Имя:</label></td>
                     <td>
-                        <input type="text" name="first_name" required="required">
+                        <input type="text" name="firstName" id = "firstName" required>
                     </td>
                 </tr>
 
                 <tr>
                     <td> Фамилия:</td>
                     <td>
-                        <input type="text" name="last_name" required="required">
+                        <input type="text" name="lastName" required>
                     </td>
                 </tr>
 
                 <tr>
                     <td> Email:</td>
                     <td>
-                        <input type="email" name="email" required="required"><br>
-                        <span id="valid_email_message" class="mesage_error"></span>
+                        <input type="email" name="email" required><br>
+                        <span id="validEmailMessage" class="message-error" hidden></span>
                     </td>
                 </tr>
 
                 <tr>
                     <td> Пароль:</td>
                     <td>
-                        <input type="password" name="password" placeholder="минимум 8 символов" required="required"><br>
-                        <span id="valid_password_message" class="mesage_error"></span>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <input type="submit" value="Зарегистрироваться">
+                        <input type="password" name="password" placeholder="минимум 8 символов" required><br>
+                        <span id="validPasswordMessage" class="mesage-error"></span>
                     </td>
                 </tr>
                 </tbody>
             </table>
+            <br>
+            <input type="submit"  name="register" value="Зарегистрироваться">
         </form>
     </div>
 </div>

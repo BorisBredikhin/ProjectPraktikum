@@ -15,7 +15,7 @@ class UserToRegister{
     }
 }
 
-$user = new UserToRegister($_POST["first_name"],$_POST["last_name"], $_POST["password"], $_POST["email"]);
+$user = new UserToRegister($_POST["firstName"],$_POST["lastName"], $_POST["password"], $_POST["email"]);
 
 //var_dump($user);
 

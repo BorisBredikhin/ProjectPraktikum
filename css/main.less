@@ -1,18 +1,47 @@
-@header-bgcolor: rgb(127,255,212);
+@header-bgcolor: rgb(127, 255, 212);
 
-body{
+body {
   margin: 0;
   padding: 0;
 }
 
-header{
+header {
   background: @header-bgcolor;
   margin: 0 !important;
   text-align: center;
   padding: 20px 0;
 }
 
-.container{
+.container {
   width: 80%;
   margin: 0 auto;
+}
+
+.block-for-messages {
+  text-align: center;
+}
+
+.auth-form {
+    background: #eef;
+  width: max-content;
+  margin: 20px auto;
+  padding: 0 20px 20px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px #cce;
+  
+  & > * {
+    display: inline-block !important;
+  }
+  & label, & td{
+    text-align: left;
+  }
+
+  & input[type = "text"], & input[type = "email"], & input[type = "password"]{
+    border-radius: 5px;
+    padding: 3px;
+  }
+
+  & input[type=submit]{
+    margin-top: 10px;
+  }
 }
