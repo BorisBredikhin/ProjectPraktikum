@@ -8,19 +8,19 @@ include ROOT_DIR . "/admin/header.php";
             <h2>Вход</h2>
             <br>
 
-            <form method="post" action="/login/">
+            <form method="post" action="admin/login.php">
                 <table>
                     <tr>
                         <td><label for="login">Логин:</label></td>
                         <td><input id="login" type="text" name="login"></td>
                     </tr>
                     <tr>
-                        <td><label for="password">Пароль</label></td>
-                        <td><input id="password" type="text" name="password"></td>
+                        <td><label for="password">Пароль:</label></td>
+                        <td><input id="password" type="password" name="password"></td>
                     </tr>
                 </table>
                 <br>
-                <input type="submit" name="login" value="Войти">
+                <input type="submit" name="btnLogin" value="Войти">
             </form>
         </div>
     </div>

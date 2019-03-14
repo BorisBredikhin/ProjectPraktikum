@@ -1,9 +1,9 @@
 <?php
 require_once "config.php";
 $pageName = "Главная";
+//echo ROOT_DIR;
 include ROOT_DIR."/admin/header.php";
 ?>
-<a href="registration.php">Зарегистрироваться</a>
 <table
 border="1"
 background="images/168.png"

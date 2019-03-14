@@ -12,6 +12,15 @@ header {
   width: 80%;
   margin: 0 auto;
 }
+.float-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.float-right {
+  float: right;
+  margin-left: 5px;
+}
 .block-for-messages {
   text-align: center;
 }
