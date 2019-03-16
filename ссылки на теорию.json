@@ -1,0 +1,22 @@
+<?php
+$cart = array(
+   https://studfiles.net/preview/3104683/
+
+   https://html5book.ru/osnovy-html/
+
+   http://code.mu/books/css
+    array(
+      "productID" => 34,
+      "productName" => "SuperWidget",
+      "quantity" => 1
+    ),
+    array(
+      "productID" => 56,
+      "productName" => "WonderWidget",
+      "quantity" => 3
+    )
+  ),
+  "orderCompleted" => true
+);
+echo json_encode( $cart );
+?>
