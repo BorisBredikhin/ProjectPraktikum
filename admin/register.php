@@ -1,5 +1,7 @@
 <?php
 include_once "../config.php";
+if (!defined($GLOBALS["sitedata"]))
+    include "data/sitedataParser.php";
 class UserToRegister{
     public $firstName;
     public $lastName;
@@ -19,7 +21,9 @@ $user = new UserToRegister($_POST["firstName"],$_POST["lastName"], $_POST["passw
 
 //var_dump($user);
 
-$userFileName=substr($user->email, 0, strpos($user->email, '@')).".json";
+$userId = substr($user->email, 0, strpos($user->email, '@'));
+
+$userFileName=$userId.".json";
 $path = ROOT_DIR."/admin/data/users/";
 
 if (file_exists($path.$userFileName)) {
@@ -40,6 +44,10 @@ else{
 
     $host  = $_SERVER["HTTP_HOST"];
     $extra = 'succesfulRegistration.php';
-    //header("Location: http://$host$uri/messages/$extra");
+
+    require_once "answers.module";
+
+    add_data_row($userId, $GLOBALS);
     exit;
 }
+

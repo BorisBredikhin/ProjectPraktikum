@@ -1,0 +1,19 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: HP
+ * Date: 16.03.2019
+ * Time: 13:39
+ */
+
+function add_data_row($userId, $glob){
+    $file = fopen("progress.csv", 'a');
+    $questions = $glob["sitedata"]->{"questions"};
+    $array = array($userId);
+
+    //var_dump($questions);
+    for ($i = 0; $i< count($questions);$i++)
+        array_push($array, 0);
+        fputcsv($file, $array);
+    fclose($file);
+}
