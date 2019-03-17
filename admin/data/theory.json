@@ -1,7 +1,24 @@
 {
-  "data":[{
-  "id": 0,
-  "title": "Основы html для начинающих на понятном языке",
-  "address": "http://nesmelov.ru/html/osnovy-html.html"
-}]
+  "data": [
+    {
+      "id": 0,
+      "title": "Основы html для начинающих на понятном языке",
+      "address": "http://nesmelov.ru/html/osnovy-html.html"
+    },
+    {
+      "id": 1,
+      "title":  "1. Основные понятия",
+      "address": "https://studfiles.net/preview/3104683/"
+    },
+    {
+      "id": 2,
+      "title":  "Основы HTML",
+      "address": "https://html5book.ru/osnovy-html/"
+    },
+    {
+      "id": 3,
+      "title":  "Учебник HTML и CSS для новичков | Трепачёв Дмитрий",
+      "address": "http://code.mu/books/css"
+    }
+  ]
 }

@@ -1,3 +1,7 @@
+@center:{
+  width: 80%;
+  margin: 0 auto;
+}
 @header-bgcolor: rgb(127, 255, 212);
 
 body {
@@ -13,8 +17,7 @@ header {
 }
 
 .container {
-  width: 80%;
-  margin: 0 auto;
+  @center();
 }
 
 
@@ -58,4 +61,9 @@ header {
   & input[type=submit]{
     margin-top: 10px;
   }
+}
+
+.theory-frame{
+  @center();
+  height: 80vh;
 }

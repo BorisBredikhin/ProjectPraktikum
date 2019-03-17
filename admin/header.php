@@ -10,6 +10,7 @@ if (!defined($GLOBALS["sitedata"]))//Сервер тольько что запу
 <head>
     <title><?=$GLOBALS["sitedata"]->{"name"}." : ".$pageName;?></title>
     <link rel="stylesheet" href=<?="\""."/css/main.css\""?>>
+
 </head>
 <body>
 <header>

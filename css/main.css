@@ -48,4 +48,9 @@ header {
 .auth-form input[type=submit] {
   margin-top: 10px;
 }
+.theory-frame {
+  width: 80%;
+  margin: 0 auto;
+  height: 80vh;
+}
 /*# sourceMappingURL=main.css.map */

@@ -1,17 +1,15 @@
 <?php
 require_once "config.php";
-$tId = 0;//$_GET["tId"];
-$pageName = $GLOBALS["theory"]->{"data"}[$tId]->{"title"};
+$tId = $_GET["tId"];
+$pageName = "";
 include ROOT_DIR . "/admin/header.php";
 ?>
 <?php
-/*var_dump($GLOBALS["sitedata"]);
-
-foreach ($GLOBALS["sitedata"]->{"data"} as $value){
-    var_dump($value);
-}
-*/?>
-<iframe src="<?=$GLOBALS["theory"]->{"data"}[$tId]->{"address"}?>">
+$t = $GLOBALS["theory"]->{"data"}[$tId]->{"title"};?>
+<script>
+    document.title+=" <?=$t?>";
+</script>
+<iframe   src="<?=$GLOBALS["theory"]->{"data"}[$tId]->{"address"}?>" class="theory-frame" id="theory">
 
 </iframe>
 <?php
