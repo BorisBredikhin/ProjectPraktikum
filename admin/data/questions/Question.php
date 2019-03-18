@@ -10,9 +10,16 @@
 class Question
 {
     public $data;
+    private $input;
+
     function __construct($questionData)
     {
         $this->data = $questionData;
+        if (isset($_SESSION["logged"])) {
+            $this->input = '<input type="button" name="submit" id="submit" value="Проверить" onClick = "getdetails()" />';
+        } else {
+            $this->input = "<p><a href=\"" . ROOT_SERVER . "/authorization.php" . "\">Войти</a> | <a href=\"" . ROOT_SERVER . "/registration.php" . "\" > Зарегистрироваться</a></p>";
+        }
         //var_dump($this->data);
     }
 
@@ -41,8 +48,7 @@ class Question
     private function printCheckbox(){
         echo <<<HTML
 <form action="/admin/data/questions/processAnswer.php" method="post">
-<input type="hidden" name="id" value="{$this->data->{"id"}}">
-<input type="hidden" name="id" value="{$this->data->{"id"}}">
+<input type="hidden" name="id" id=""id" value="{$this->data->{"id"}}">
 HTML;
         //var_dump($this->data->{"answers"});
         foreach ($this->data->{"answers"} as $answer){
@@ -51,8 +57,8 @@ HTML;
             echo $answer->{"text"};
             echo "</label><br>";
         }
+        echo $this->input;
         echo <<<HTML
-        <input type="submit" value="Проверить">
 </form>
 HTML;
 
@@ -62,7 +68,6 @@ HTML;
         echo <<<HTML
 <form action="/admin/data/questions/processAnswer.php" method="post">
 <input type="hidden" name="id" value="{$this->data->{"id"}}">
-<input type="hidden" name="id" value="{$this->data->{"id"}}">
 HTML;
         //var_dump($this->data->{"answers"});
         foreach ($this->data->{"answers"} as $answer){
@@ -71,8 +76,9 @@ HTML;
             echo $answer->{"text"};
             echo "</label><br>";
         }
+        //TODO:
         echo <<<HTML
-        <input type="submit" value="Проверить">
+        {$this->input}
 </form>
 HTML;
 
@@ -86,7 +92,8 @@ HTML;
 HTML;
         echo <<<HTML
         <label>Ответ: <input type="text" name="answer" placeholder="Введите Ответ"></label>
-        <br><input type="submit" value="Проверить">
+        <br>
+        {$this->input}
 </form>
 HTML;
 

@@ -1,14 +1,15 @@
-<!doctype html>
-<html lang="ru">
-<head>
-    <title>Document</title>
-</head>
-<body>
-<h1>Страница обработки ответов пользователя</h1>
-<code>
+<?php
+require_once "../../../config.php";
+session_start();
+if (!defined($GLOBALS["sitedata"]))//Сервер тольько что запущен и данные сайта не считаны
+    //require_once "../config.php";
+    include "../sitedataParser.php";
+?>
+<pre>
     <?php
+    session_start();
     var_dump($_POST);
+    var_dump($GLOBALS["sitedata"]) ;
+    var_dump($_SESSION);
     ?>
-</code>
-</body>
-</html>
+</pre>

@@ -10,7 +10,11 @@ if (!defined($GLOBALS["sitedata"]))//Сервер тольько что запу
 <head>
     <title><?=$GLOBALS["sitedata"]->{"name"}." : ".$pageName;?></title>
     <link rel="stylesheet" href=<?="\""."/css/main.css\""?>>
-
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <?php
+    if (isset($addition))
+        echo $addition;
+    ?>
 </head>
 <body>
 <header>
