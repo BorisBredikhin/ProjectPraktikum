@@ -1,11 +1,2 @@
-.idea/encodings.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/ProjectPraktikum.iml
-.idea/workspace.xml
-.idea/vcs.xml
-.idea/deployment.xml
-.idea/php.xml
-.idea/webServers.xml
-.idea/watcherTasks.xml
+.idea/
 node_modules/

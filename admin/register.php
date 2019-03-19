@@ -46,9 +46,6 @@ else{
     $host  = $_SERVER["HTTP_HOST"];
     $extra = 'succesfulRegistration.php';
 
-    require_once "answers.module";
-
-    add_data_row($userId, $GLOBALS);
     exit;
 }
 

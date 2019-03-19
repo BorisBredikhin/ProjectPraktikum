@@ -8,23 +8,23 @@
       "id": 0,
       "answers": [
         {
-          "id": "ans1",
+          "id": 0,
           "text": "wrong answer"
         },
         {
-          "id": "ans2",
+          "id": 1,
           "text": "wrong answer"
         },
         {
-          "id": "ans3",
+          "id": 2,
           "text": "right answer"
         },
         {
-          "id": "ans4",
+          "id": 3,
           "text": "wrong answer"
         }
       ],
-      "rightAnswer": "ans3"
+      "rightAnswer": 2
     },
     {
       "type": "checkbox task",
@@ -33,25 +33,25 @@
       "id": 1,
       "answers": [
         {
-          "id": "ans1",
+          "id": 0,
           "text": "right answer"
         },
         {
-          "id": "ans2",
+          "id": 1,
           "text": "wrong answer"
         },
         {
-          "id": "ans3",
+          "id": 2,
           "text": "wrong answer"
         },
         {
-          "id": "ans4",
+          "id": 3,
           "text": "right answer"
         }
       ],
       "rightAnswer": [
-        "ans1",
-        "ans4"
+        0,
+        3
       ]
     },
     {

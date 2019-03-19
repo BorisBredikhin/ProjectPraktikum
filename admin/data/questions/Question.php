@@ -48,12 +48,12 @@ class Question
     private function printCheckbox(){
         echo <<<HTML
 <form action="/admin/data/questions/processAnswer.php" method="post">
-<input type="hidden" name="id" id=""id" value="{$this->data->{"id"}}">
+<input type="hidden" name="id"  value={$this->data->{"id"}}>
 HTML;
         //var_dump($this->data->{"answers"});
         foreach ($this->data->{"answers"} as $answer){
             //var_dump($answer);
-            echo "<label><input name='answers[]' type='checkbox' value='{$answer->{"id"}}'>";
+            echo "<label><input name='answers[]' type='checkbox' value={$answer->{"id"}}>";
             echo $answer->{"text"};
             echo "</label><br>";
         }
@@ -67,12 +67,12 @@ HTML;
     private function printRadio(){
         echo <<<HTML
 <form action="/admin/data/questions/processAnswer.php" method="post">
-<input type="hidden" name="id" value="{$this->data->{"id"}}">
+<input type="hidden" name="id" value={$this->data->{"id"}}>
 HTML;
         //var_dump($this->data->{"answers"});
         foreach ($this->data->{"answers"} as $answer){
             //var_dump($answer);
-            echo "<label><input name='answer' type='radio' value='{$answer->{"id"}}'>";
+            echo "<label><input name='answer' type='radio' value={$answer->{"id"}}>";
             echo $answer->{"text"};
             echo "</label><br>";
         }
@@ -88,7 +88,7 @@ HTML;
         //var_dump($this->data);
         echo <<<HTML
 <form action="/admin/data/questions/processAnswer.php" method="post">
-<input type="hidden" name="id" value="{$this->data->{"id"}}">
+<input type="hidden" name="id" value={$this->data->{"id"}}>
 HTML;
         echo <<<HTML
         <label>Ответ: <input type="text" name="answer" placeholder="Введите Ответ"></label>

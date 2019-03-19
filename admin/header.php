@@ -31,7 +31,7 @@ if (!defined($GLOBALS["sitedata"]))//Сервер тольько что запу
         }
         else{
             //var_dump($_SESSION);
-            echo "<a href=\"".ROOT_SERVER."/logout.php" . "\" class=\"float-right\">Выйти</a><div class='float-right'> | </div><div class=\"float-right\">" . $_SESSION["userdata"]->{"firstName"} . " " . $_SESSION["userdata"]->{"lastName"}."</div>";
+            echo "<a href=\"".ROOT_SERVER."/logout.php" . "\" class=\"float-right\">Выйти</a><div class='float-right'> | </div><div class=\"float-right\">" . $_SESSION["userdata"]->{"firstName"} . " " . $_SESSION["userdata"]->{"lastName"}." <span id='points'>". $_SESSION["userdata"]->{"points"}."</span> баллов</div>";
 
             //var_dump($_SESSION);
         }
