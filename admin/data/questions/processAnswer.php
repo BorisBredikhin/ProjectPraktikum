@@ -4,16 +4,12 @@ session_start();
 if (!defined($GLOBALS["sitedata"]))//Сервер тольько что запущен и данные сайта не считаны
     include "../sitedataParser.php";
 ?>
-<pre>
-    <?php
-    session_start();
-    var_dump($_POST);
-    var_dump($GLOBALS["sitedata"]) ;
-    var_dump($_SESSION);
-    ?>
-</pre>
+
 <?php
 // radio task
+//var_dump($_POST);
+$question = $GLOBALS["sitedata"]->{"questions"}[(int)$_POST["id"]];
+//var_dump($question);
 if ($question->{"type"} == "radio task"){
     if ($_POST["answer"] == $question->{"rightAnswer"}){
         echo "<span class='right-answer'>Верно</span><div id = 'delta' hidden>1</div>";
