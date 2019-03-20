@@ -15,18 +15,24 @@ function get_href($item){
 //var_dump($GLOBALS["menu"]);
 ?>
 <ul class="menu">
-    <?php foreach ($GLOBALS["menu"]->{"data"} as $key => $list){?>
-    <li>
-        <?=$key?>
-        <ul>
-            <?php
-            foreach ($list as $subkey => $item){
-                ?>
-                <li><a href="<?=get_href($item);?>"><?=$subkey;?></a></li>
-                <?php
-            }
+    <?php foreach ($GLOBALS["menu"]->{"data"} as $key => $list) { ?>
+        <li>
+        <?php
+        if (gettype($list) == "object") {
             ?>
-        </ul>
-    </li>
-    <?php } ?>
+            <?= $key ?>
+            <ul>
+                <?php
+                foreach ($list as $subkey => $item) {
+                    ?>
+                    <li><a href="<?= get_href($item); ?>"><?= $subkey; ?></a></li>
+                    <?php
+                }
+                ?>
+            </ul>
+            </li>
+        <?php } else {
+            echo "<a href='$list'>$key</a>";
+        }
+    }?>
 </ul>
