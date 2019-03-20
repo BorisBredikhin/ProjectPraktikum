@@ -53,4 +53,24 @@ header {
   margin: 0 auto;
   height: 80vh;
 }
+.menu {
+  max-width: 29%;
+  float: left;
+  padding: 5px;
+}
+.menu * {
+  list-style: none;
+}
+.menu li {
+  color: #000;
+}
+.menu li a {
+  text-decoration: none;
+  color: dodgerblue;
+}
+.page {
+  float: right;
+  min-width: 60%;
+  max-width: 70%;
+}
 /*# sourceMappingURL=main.css.map */
