@@ -19,3 +19,7 @@ $file = file_get_contents(ROOT_DIR."/admin/data/theory.json");
 $data = json_decode($file);
 //var_dump($data);
 $GLOBALS["theory"] = $data;
+$file = file_get_contents(ROOT_DIR."/admin/data/menu.json");
+$data = json_decode($file);
+//var_dump($data);
+$GLOBALS["menu"] = $data;

@@ -9,7 +9,7 @@ if (!defined($GLOBALS["sitedata"]))//Сервер тольько что запу
 <html lang="ru">
 <head>
     <title><?=$GLOBALS["sitedata"]->{"name"}." : ".$pageName;?></title>
-    <link rel="stylesheet" href=<?="\""."/css/main.css\""?>>
+    <link rel="stylesheet" href=<?="\"".ROOT_SERVER."/css/main.css\""?>>
     <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
     <?php
     if (isset($addition))
@@ -39,3 +39,6 @@ if (!defined($GLOBALS["sitedata"]))//Сервер тольько что запу
     </div>
 </div>
 </header>
+<?php
+if (!($pageName == "Вход" || $pageName == "Регистрация"))
+    include ROOT_DIR . "/admin/menu.php";
