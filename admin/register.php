@@ -8,6 +8,7 @@ class UserToRegister{
     public $password;
     public $email;
     public $points = 0;
+    public $answeredQuestions = array();
 
     public function __construct($firstName, $lastName, $password, $email)
     {

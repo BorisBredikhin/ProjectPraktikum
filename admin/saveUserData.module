@@ -1,0 +1,17 @@
+<?php
+
+session_start();
+
+function save_user_data(){
+    $userId = substr($_SESSION["userdata"]->{"email"}, 0, strpos($_SESSION["userdata"]->{"email"}, '@'));
+
+    $userFileName=$userId.".json";
+    $path = ROOT_DIR."/admin/data/users/";
+
+    $file = fopen($path.$userFileName, 'w');
+
+    $userJSON = json_encode($_SESSION["userdata"]);
+
+    fwrite($file, $userJSON);
+    fclose($file);
+}
