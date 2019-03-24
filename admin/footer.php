@@ -1,7 +1,10 @@
 
 <?php
 if (!($pageName == "Вход" || $pageName == "Регистрация"))
-{echo "</div></div>";
+{echo "</div>";
+	include ROOT_DIR . "/admin/menu.php";
+    echo "</div>";
+
 }
 ?>
 <footer>

@@ -16,8 +16,11 @@ class Question
     {
         $this->data = $questionData;
         if (isset($_SESSION["logged"])) {
-            $this->input = '<input type="button" name="submit" id="submit" value="Проверить" onClick = "getdetails()" />';
-        } else {
+			if (!in_array((int)$this->data->{"id"}, $_SESSION["userdata"]->{"answeredQuestions"})){  $this->input = '<input type="button" name="submit" id="submit" value="Проверить" onClick = "getdetails()" />';
+        } else{
+        	 $this->input = "<div class='already-answered'>Вы уже ответили верно на этот вопрос</div>";
+		}}
+        else {
             $this->input = "<p><a href=\"" . ROOT_SERVER . "/authorization.php" . "\">Войти</a> | <a href=\"" . ROOT_SERVER . "/registration.php" . "\" > Зарегистрироваться</a></p>";
         }
         //var_dump($this->data);

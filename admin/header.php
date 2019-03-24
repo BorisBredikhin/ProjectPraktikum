@@ -43,7 +43,6 @@ if (!defined($GLOBALS["sitedata"]))//Сервер тольько что запу
 if (!($pageName == "Вход" || $pageName == "Регистрация"))
     {
         echo "<div class=\"float-container\">";
-        include ROOT_DIR . "/admin/menu.php";
         echo '<div class="page">';
     }
 ?>

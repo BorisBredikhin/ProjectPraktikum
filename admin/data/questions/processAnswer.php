@@ -11,6 +11,7 @@
         <div id='delta' hidden>1</div>
 		<?php
 		$_SESSION["userdata"]->{"points"}++;
+		array_push($_SESSION["userdata"]->{'answeredQuestions'}, $_POST["id"]);
 	}
 	
 	function wrongAnswer()
@@ -20,19 +21,26 @@
         <div id='delta' hidden>0</div>
 		<?php
 	}
-
-// radio task
-//var_dump($_SESSION);
-//var_dump($_POST);
-	$question = $GLOBALS["sitedata"]->{"questions"}[(int)$_POST["id"]];
-//var_dump($question);
-	if ($question->{"type"} == "radio task") {
+	
+	/**
+	 * @param $question
+	 */
+	function check_radio($question): void
+	{
 		if ($_POST["answer"] == $question->{"rightAnswer"}) {
 			rightAnswer();
 		} else {
 			wrongAnswer();
 		}
 	}
-	array_push($_SESSION["userdata"]->{'answeredQuestions'}, $_POST["id"]);
+// radio task
+//var_dump($_SESSION);
+//var_dump($_POST);
+	$question = $GLOBALS["sitedata"]->{"questions"}[(int)$_POST["id"]];
+//var_dump($question);
+	
+	if ($question->{"type"} == "radio task") {
+		check_radio($question);
+	}
 	save_user_data();
 ?>

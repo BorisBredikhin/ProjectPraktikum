@@ -8,5 +8,9 @@ function getdetails() {
         $("#result").html(result);
 
         $("#points").html(parseInt($("#points").html())+parseInt($("#delta").html()));
+
+        if ($("#delta").html()==="1"){
+            $("#submit").remove();
+        }
     });
 }
