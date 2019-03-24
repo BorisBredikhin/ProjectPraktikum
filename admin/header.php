@@ -26,7 +26,7 @@ if (!defined($GLOBALS["sitedata"]))//Сервер тольько что запу
     <div class="float-container">
         <?php
         if (!isset($_SESSION["logged"])){
-            echo "<a href=\"".ROOT_SERVER."/authorization.php" . "\" class=\"float-right\">Войти</a><div class='float-right'> | </div>\"<a href=\"".ROOT_SERVER."/registration.php" . "\" class=\"float-right\" > Зарегистрироваться</a >" ;
+            echo "<a href=\"".ROOT_SERVER."/authorization.php" . "\" class=\"float-right\">Войти</a><div class='float-right'> | </div><a href=\"".ROOT_SERVER."/registration.php" . "\" class=\"float-right\" > Зарегистрироваться</a >" ;
 
         }
         else{
