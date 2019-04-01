@@ -76,4 +76,11 @@ header {
 img {
   width: 100%;
 }
+.wrong-answer,
+.wrong {
+  color: red;
+}
+.right-answer {
+  color: green;
+}
 /*# sourceMappingURL=main.css.map */

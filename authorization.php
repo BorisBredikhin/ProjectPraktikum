@@ -1,6 +1,9 @@
 <?php
 require_once "config.php";
 $pageName = "Вход";
+	$addition = <<<HTML
+<script src="js/login.js"></script>
+HTML;
 include ROOT_DIR . "/admin/header.php";
 ?>
     <div class="container block-for-messages auth-form">
@@ -20,7 +23,8 @@ include ROOT_DIR . "/admin/header.php";
                     </tr>
                 </table>
                 <br>
-                <input type="submit" name="btnLogin" value="Войти">
+                <input type="button" name="btnLogin" value="Войти" onclick="getdetails();">
+                <div id="result"></div>
             </form>
         </div>
     </div>
