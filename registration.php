@@ -1,6 +1,8 @@
 <?php
 require_once "config.php";
-$pageName = "Регистрация";
+$pageName = "Регистрация";                   $addition = <<<HTML
+<script src="js/register.js"></script>
+HTML;
 include ROOT_DIR."/admin/header.php";
 ?>
 <!-- Блок для вывода сообщений -->
@@ -43,7 +45,8 @@ include ROOT_DIR."/admin/header.php";
                 </tbody>
             </table>
             <br>
-            <input type="submit"  name="register" value="Зарегистрироваться">
+            <input type="button" name="btnLogin" value="Зарегистрироваться" onclick="getdetails();">
+            <div id="result"></div>
         </form>
     </div>
 </div>

@@ -29,24 +29,17 @@ $userFileName=$userId.".json";
 $path = ROOT_DIR."/admin/data/users/";
 
 if (file_exists($path.$userFileName)) {
-
-    $host  = $_SERVER['HTTP_HOST'];
-    $extra = 'messages/userAlreadyExists.php';
-    header("Location: http://$host/$extra");
-    exit;
+	echo "<div id='response' hidden>wrong</div>";
 }
 else{
-    echo $path.$userFileName;
+    //echo $path.$userFileName;
     $file = fopen($path.$userFileName, 'w');
 
     $userJSON = json_encode($user);
 
     fwrite($file, $userJSON);
     fclose($file);
-
-    $host  = $_SERVER["HTTP_HOST"];
-    $extra = 'succesfulRegistration.php';
-
+	echo "<div id='response' hidden>redir</div>";
     exit;
 }
 

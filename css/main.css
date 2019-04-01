@@ -80,7 +80,8 @@ img {
 .wrong {
   color: red;
 }
-.right-answer {
+.right-answer,
+.right {
   color: green;
 }
 /*# sourceMappingURL=main.css.map */
