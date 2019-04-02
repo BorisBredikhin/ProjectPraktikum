@@ -32,7 +32,7 @@ function get_href($item){
             </ul>
             </li>
         <?php } else {
-            ?><a href='<?=ROOT_SERVER.$list;?>'><?=$key?></a><?
+            ?><a href='<?=ROOT_SERVER.'/'.$list;?>'><?=$key?></a><?
         }
     }?>
 </ul>

@@ -101,3 +101,21 @@ img{
 .right-answer, .right{
   color: green;
 }
+
+.rating{
+  border-collapse: collapse;
+  width: 80%;
+  margin-right: 20%;
+
+  & tr:nth-child(2n){
+    background: #ddd;
+  }
+  & thead{
+    background: #aaa;
+    font-weight: bold;
+  }
+  & td{
+    padding: 5px;
+  }
+  text-align: center;
+}
