@@ -3,50 +3,75 @@
   "questions": [
     {
       "type": "radio task",
-      "title": "Пример вопроса на выбор 1 из 4-х вариантов",
-      "text": "Выберите один из 4 вариантов",
+      "title": "Язык HTML — это",
+      "text": "",
       "id": 0,
       "answers": [
         {
           "id": 0,
-          "text": "wrong answer"
+          "text": "Одно из средств при создании Web-страниц"
         },
         {
           "id": 1,
-          "text": "wrong answer"
+          "text": "Система программирования"
         },
         {
           "id": 2,
-          "text": "right answer"
+          "text": "Графический редактор"
         },
         {
           "id": 3,
-          "text": "wrong answer"
+          "text": "СУБД"
         }
       ],
-      "rightAnswer": 2
+      "rightAnswer": 0
     },
     {
-      "type": "checkbox task",
-      "title": "Пример вопроса на выбор нескольких из 4-х вариантов",
-      "text": "Выберите несколько правильных из 4 предложенных вариантов",
+      "type": "radio task",
+      "title": "Программа для просмотра HTML",
+      "text": "Программа для просмотра HTML называется",
       "id": 1,
       "answers": [
         {
           "id": 0,
-          "text": "right answer"
+          "text": "Сервер"
         },
         {
           "id": 1,
-          "text": "wrong answer"
+          "text": "Протокол"
         },
         {
           "id": 2,
-          "text": "wrong answer"
+          "text": "Графический редактор"
         },
         {
           "id": 3,
-          "text": "right answer"
+          "text": "Браузер"
+        }
+      ],
+      "rightAnswer": 0
+    },
+    {
+      "type": "checkbox task",
+      "title": "Аргументы тэгов 1",
+      "text": "Какие теги требуют обязательный атрибут?",
+      "id": 2,
+      "answers": [
+        {
+          "id": 0,
+          "text": "&lt;a&gt;"
+        },
+        {
+          "id": 1,
+          "text": "&lt;p&gt;"
+        },
+        {
+          "id": 2,
+          "text": "&lt;b&gt;"
+        },
+        {
+          "id": 3,
+          "text": "&lt;img&gt;"
         }
       ],
       "rightAnswer": [
@@ -56,10 +81,17 @@
     },
     {
       "type": "text task",
-      "title": "Пример вопроса с кратким ответом",
-      "text": "Сколько будет 2+2?",
-      "id": 2,
-      "rightAnswer": "4"
+      "title": "Аргументы тэгов 2",
+      "text": "Какой аргумент задаёт ссылку на изображение в тэге &lt;img&gt;?",
+      "id": 3,
+      "rightAnswer": "src"
+    },
+    {
+      "type": "text task",
+      "title": "CSS 1",
+      "text": "Какое свойство CSS задаёт цвет текста?",
+      "id": 4,
+      "rightAnswer": "color"
     }
   ]
 }
